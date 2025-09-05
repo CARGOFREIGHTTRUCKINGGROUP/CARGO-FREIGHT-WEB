@@ -1,20 +1,26 @@
 'use client';
 
 import Link from 'next/link';
+import type { Route } from 'next';           // ✅ add this
 import { Button } from '@/components/ui/button';
 import { Truck, Menu, X } from 'lucide-react';
 import { site } from '@/lib/config/site';
 import { useState } from 'react';
 
+type NavLink = {
+  href: Route;                               // ✅ internal routes are typed
+  label: string;
+};
+
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navLinks = [
+  const navLinks: NavLink[] = [
     { href: '/services', label: 'Services' },
     { href: '/shippers', label: 'Shippers' },
     { href: '/drivers', label: 'Drivers' },
-    { href: '/safety', label: 'Safety' },
-    { href: '/about', label: 'About' },
+    { href: '/safety',  label: 'Safety'  },
+    { href: '/about',   label: 'About'   },
     { href: '/contact', label: 'Contact' },
   ];
 
