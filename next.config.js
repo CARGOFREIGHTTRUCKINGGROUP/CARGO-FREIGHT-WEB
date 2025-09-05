@@ -1,16 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
-  images: { 
-    unoptimized: true,
-    domains: ['images.pexels.com']
+  images: {
+    domains: ['images.pexels.com'], // allow remote images
+    // no "unoptimized": true — Vercel will optimize images
   },
   experimental: {
     typedRoutes: true,
-  }
+  },
 };
 
 module.exports = nextConfig;
