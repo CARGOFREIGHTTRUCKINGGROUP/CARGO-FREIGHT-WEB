@@ -1,10 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Shield, Lock, Eye, UserCheck, Mail, Phone } from 'lucide-react';
 import { site } from '@/lib/config/site';
-import Link from 'next/link';
 
 export default function PrivacyPage() {
-  const lastUpdated = 'January 1, 2025';
+  const lastUpdated = 'September 5, 2025';
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -17,16 +16,11 @@ export default function PrivacyPage() {
                 <Shield className="h-8 w-8 text-blue-600" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Privacy Policy
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Privacy Policy</h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Your privacy is important to us. This policy explains how we collect, 
-              use, and protect your personal information.
+              Your privacy is important to us. This policy explains how we collect, use, and protect your personal information.
             </p>
-            <p className="text-sm text-gray-500 mt-4">
-              Last updated: {lastUpdated}
-            </p>
+            <p className="text-sm text-gray-500 mt-4">Last updated: {lastUpdated}</p>
           </div>
         </div>
       </section>
@@ -35,7 +29,6 @@ export default function PrivacyPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8">
-            
             {/* Information We Collect */}
             <Card>
               <CardHeader>
@@ -58,16 +51,16 @@ export default function PrivacyPage() {
                     <li>Communication preferences and consent records</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h3 className="font-semibold text-lg mb-2">Automatically Collected Information</h3>
                   <p className="text-gray-600 mb-3">
                     We may automatically collect certain information when you visit our website:
                   </p>
                   <ul className="list-disc list-inside space-y-1 text-gray-600 ml-4">
-                    <li>IP address and browser information</li>
-                    <li>Pages visited and time spent on our site</li>
-                    <li>Referring website and search terms used</li>
+                    <li>IP address and browser details</li>
+                    <li>Pages visited and time on site</li>
+                    <li>Referring website and search terms</li>
                     <li>Device type and operating system</li>
                   </ul>
                 </div>
@@ -83,21 +76,19 @@ export default function PrivacyPage() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-gray-600">
-                  We use the information we collect for the following purposes:
-                </p>
+                <p className="text-gray-600">We use the information we collect to:</p>
                 <ul className="list-disc list-inside space-y-2 text-gray-600 ml-4">
-                  <li>To provide freight transportation services and respond to quote requests</li>
-                  <li>To process driver applications and conduct employment-related communications</li>
-                  <li>To send service updates, shipment notifications, and important business communications</li>
-                  <li>To improve our website, services, and customer experience</li>
-                  <li>To comply with legal obligations and regulatory requirements</li>
-                  <li>To protect our business interests and prevent fraud</li>
+                  <li>Provide freight services and respond to quote requests</li>
+                  <li>Process driver applications and communicate about employment</li>
+                  <li>Send service updates, shipment notifications, and business communications</li>
+                  <li>Improve our website, services, and customer experience</li>
+                  <li>Comply with legal and regulatory requirements</li>
+                  <li>Protect our business interests and prevent fraud</li>
                 </ul>
               </CardContent>
             </Card>
 
-            {/* SMS Communications */}
+            {/* SMS Communications (TCR language) */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center text-2xl">
@@ -107,20 +98,18 @@ export default function PrivacyPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-gray-600">
-                  When you provide consent to receive SMS communications from us:
+                  When you provide your mobile number and consent to receive SMS messages from us:
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-600 ml-4">
-                  <li>We will send you updates about your quote requests, applications, or shipments</li>
-                  <li>Message and data rates may apply based on your mobile carrier plan</li>
-                  <li>You can opt out at any time by replying STOP to any message</li>
-                  <li>Reply HELP for assistance or contact us at {site.phone}</li>
-                  <li><strong>We do not share your mobile number with third parties for marketing purposes</strong></li>
+                  <li>We’ll send informational texts about quotes, applications, shipments, and service alerts</li>
+                  <li><strong>Message frequency varies</strong>; message & data rates may apply</li>
+                  <li><strong>Consent is not a condition of purchase</strong></li>
+                  <li>You may opt out at any time by replying <strong>STOP, STOPALL, UNSUBSCRIBE, CANCEL, END,</strong> or <strong>QUIT</strong></li>
+                  <li>Reply <strong>HELP</strong> for assistance or contact us at {site.phone} or {site.email}</li>
                 </ul>
                 <div className="bg-blue-50 p-4 rounded-lg">
                   <p className="text-sm text-blue-800">
-                    <strong>No Third-Party Sharing:</strong> Your mobile consent and phone number are never 
-                    shared with third-party marketing companies or used for purposes other than our direct 
-                    business communications with you.
+                    <strong>No Third-Party Marketing Sharing:</strong> We do not sell or share mobile numbers, SMS opt-in data, or consent with third parties for their marketing or promotional use. Mobile carriers are not liable for delayed or undelivered messages.
                   </p>
                 </div>
               </CardContent>
@@ -136,21 +125,13 @@ export default function PrivacyPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-gray-600">
-                  We do not sell, trade, or rent your personal information to third parties. 
-                  We may share your information only in the following circumstances:
+                  We do not sell, trade, or rent your personal information. We may share your information only:
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-600 ml-4">
-                  <li>With service providers who assist us in operating our business (under strict confidentiality agreements)</li>
-                  <li>When required by law, regulation, or legal process</li>
-                  <li>To protect our rights, property, or safety, or that of our customers or others</li>
-                  <li>In connection with a business transfer, merger, or acquisition</li>
+                  <li>With service providers who support our operations (under confidentiality obligations)</li>
+                  <li>When required by law or to protect our rights and safety</li>
+                  <li>In connection with a merger, acquisition, or business transfer</li>
                 </ul>
-                <div className="bg-green-50 p-4 rounded-lg">
-                  <p className="text-sm text-green-800">
-                    <strong>Your mobile consent is never shared with third-party marketing companies.</strong> 
-                    We respect your privacy and use your contact information solely for our direct business purposes.
-                  </p>
-                </div>
               </CardContent>
             </Card>
 
@@ -164,15 +145,8 @@ export default function PrivacyPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-gray-600">
-                  We implement appropriate technical and organizational measures to protect your personal information:
+                  We implement administrative, technical, and physical safeguards to protect your information, but no method of transmission or storage is 100% secure.
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-600 ml-4">
-                  <li>Secure data transmission using industry-standard encryption</li>
-                  <li>Access controls limiting who can view your information</li>
-                  <li>Regular security assessments and updates</li>
-                  <li>Secure storage of physical and electronic records</li>
-                  <li>Employee training on data protection and privacy practices</li>
-                </ul>
               </CardContent>
             </Card>
 
@@ -185,19 +159,12 @@ export default function PrivacyPage() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-gray-600">
-                  You have the following rights regarding your personal information:
-                </p>
+                <p className="text-gray-600">You may be able to:</p>
                 <ul className="list-disc list-inside space-y-2 text-gray-600 ml-4">
-                  <li>Request access to the personal information we have about you</li>
-                  <li>Request correction of inaccurate or incomplete information</li>
-                  <li>Request deletion of your personal information (subject to legal requirements)</li>
-                  <li>Opt out of SMS communications at any time by replying STOP</li>
+                  <li>Request access, correction, or deletion of your data (subject to law)</li>
+                  <li>Opt out of SMS anytime via the STOP keywords above</li>
                   <li>Withdraw consent for marketing communications</li>
                 </ul>
-                <p className="text-gray-600 mt-4">
-                  To exercise these rights, please contact us using the information provided below.
-                </p>
               </CardContent>
             </Card>
 
@@ -210,9 +177,6 @@ export default function PrivacyPage() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-gray-600">
-                  If you have questions about this privacy policy or our data practices, please contact us:
-                </p>
                 <div className="bg-gray-50 p-6 rounded-lg space-y-3">
                   <div className="flex items-center space-x-3">
                     <Phone className="h-5 w-5 text-blue-600" />
@@ -243,10 +207,7 @@ export default function PrivacyPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  We may update this privacy policy from time to time to reflect changes in our practices 
-                  or applicable laws. We will notify you of any material changes by posting the updated 
-                  policy on our website and updating the "Last updated" date. Your continued use of our 
-                  services after any changes indicates your acceptance of the updated policy.
+                  We may update this privacy policy from time to time. Material changes will be posted here with an updated date. Your continued use of our services indicates acceptance of the updated policy.
                 </p>
               </CardContent>
             </Card>
